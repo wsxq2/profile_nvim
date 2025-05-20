@@ -10,7 +10,8 @@ function M.get_first_elf_file(directory)
       break
     end
     if type == "file" and name:match("%.elf$") then
-      return name -- 返回第一个匹配的 .elf 文件
+      local full_path = directory .. "/" .. name -- 拼接目录和文件名
+      return full_path -- 返回第一个匹配的 .elf 文件路径
     end
   end
   return nil -- 如果没有匹配的文件，返回 nil
@@ -66,7 +67,7 @@ function M.flash_firmware(cmake_build_dir, flash_start_addr)
         end
       end)
     end,
-  }):sync()
+  }):start()
 end
 
 return M

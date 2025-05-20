@@ -9,7 +9,7 @@ table.insert(
     servertype = "stlink",
     serverpath = "st-util",
     gdbPath = "arm-none-eabi-gdb",
-    --toolchainPath = "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.2 mpacbti-rel1/bin",
+    toolchainPath = "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/12.2 mpacbti-rel1/bin",
     toolchainPrefix = "arm-none-eabi",
     --runToEntryPoint = "main",
     swoConfig = { enabled = false },
